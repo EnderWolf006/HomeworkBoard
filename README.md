@@ -1,5 +1,5 @@
 # 作业板
-![](img.png)
+![](ReadMeImages/img.png)
 
 ## 项目介绍
 - 本项目分为三个部分：学校作业板，查作业界面，API服务端
@@ -18,5 +18,33 @@
   - 若部署在公网服务器，请放行17312端口
   - 若部署在学校内网，上述均只能在学校内网访问
 
+## 食用说明
+以下为在Windows系统(Windows Server)下的使用方法，其他操作系统请各位大佬自行拉取仓库打包
+#### 准备工作
+- 你需要准备一台学校内网或公网的Windows电脑/服务器
+- 在服务器上安装Python3.8及以上版本，安装时请勾选“添加 Python 到环境变量”(Add Python To Path)
+- 安装好Python后，在命令行输入 `pip install flask`
+#### 准备文件
+- 下载右侧Releases中Latest版本的三个文件 `APIServer-release.py`  `ClientProject-release.zip` `SchoolProject-release.zip` 
+- 解压其中的 `ClientProject-release.zip` `SchoolProject-release.zip` 
+#### 配置文件
+- 在解压后的 `SchoolProject-release` 文件夹中打开 `config.json` 内部有详细的注释可自行修改
+- 在解压后的 `ClientProject-release` 文件夹中打开 `config.json` 内部有详细的注释可自行修改
+#### 部署服务端
+- 在 `SchoolProject-release` 目录下打开命令行执行 `py -m http.server 17313`
+- 在 `ClientProject-release` 目录下打开命令行执行 `py -m http.server 17314`
+- 在 `APIServer-release.py` 所在目录下打开命令行执行 `py APIServer-release.py`
+#### 使用客户端
+- 学校作业板: 浏览器访问 `http://localhost:17313`
+- 查作业界面: 浏览器访问 `http://localhost:17314`
 
+## 开源协议
+
+本软件遵循 `GPLv3` 开源协议，以下为该协议内容解读摘要:
+
+* 可自由复制 你可以将软件复制到你的电脑，你客户的电脑，或者任何地方。复制份数没有任何限制
+* 可自由分发 在你的网站提供下载，拷贝到U盘送人，或者将源代码打印出来从窗户扔出去（环保起见，请别这样做）。
+* 可以用来盈利 你可以在分发软件的时候收费，但你必须在收费前向你的客户提供该软件的 GNU GPL 许可协议，以便让他们知道，他们可以从别的渠道免费得到这份软件，以及你收费的理由。
+* 可自由修改 如果你想添加或删除某个功能，没问题，如果你想在别的项目中使用部分代码，也没问题，唯一的要求是，使用了这段代码的项目也必须使用 GPL 协议。
+* 如果有人和接收者签了合同性质的东西，并提供责任承诺，则授权人和作者不受此责任连带。
 
