@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*.*.*'  # Trigger the workflow on version tags
+    branches:
+      - main
 
 jobs:
   release:
