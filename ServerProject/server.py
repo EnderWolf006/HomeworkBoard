@@ -5,7 +5,11 @@ import json
 import datetime
 from flask import Flask, request, json, Response,send_from_directory
 app = Flask(__name__)
-dbPath = 'C:/jsondb/homeworkBoard'
+if os.name == 'nt':
+    dbPath = f'{os.getenv("appdata")}/HomeworkBoard/jsondb/homeworkBoard'
+else:
+    dbPath = '/workspaces/HomeworkBoard/jsondb/homeworkBoard'
+    
 try:
     os.makedirs(dbPath) 
 except: 
@@ -13,6 +17,7 @@ except:
 filePath = dbPath + '/{}.json'
 if not os.path.exists(dbPath):
     os.makedirs(dbPath)
+    
 @app.route('/upload',methods=['GET', 'POST'])
 def upload():
     try:
