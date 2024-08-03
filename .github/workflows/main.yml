@@ -73,7 +73,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./ClientProject/dist
+        asset_path: ./ClientProject/dist/ClientProject-release.zip
         asset_name: ClientProject-release.zip
         asset_content_type: application/zip
     
@@ -83,7 +83,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./SchoolProject/dist
+        asset_path: ./SchoolProject/dist/SchoolProject-release.zip
         asset_name: SchoolProject-release.zip
         asset_content_type: application/zip
     
