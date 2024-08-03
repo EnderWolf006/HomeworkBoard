@@ -49,18 +49,18 @@ jobs:
         prerelease: false
 
     - name: Pack Client folder
-        uses: thedoctor0/zip-release@0.7.5
-        with:
-          type: 'zip'
-          filename: 'ClientProject-release.zip'
-          directory: './ClientProject/dist'
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        filename: 'ClientProject-release.zip'
+        directory: './ClientProject/dist'
     
     - name: Pack School folder
-        uses: thedoctor0/zip-release@0.7.5
-        with:
-          type: 'zip'
-          filename: 'SchoolProject-release.zip'
-          directory: './SchoolProject/dist'
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        filename: 'SchoolProject-release.zip'
+        directory: './SchoolProject/dist'
 
     - name: Upload Release Client Asset
       uses: actions/upload-release-asset@v1
