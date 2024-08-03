@@ -35,14 +35,20 @@ jobs:
       working-directory: ./ClientProject
 
 
-    - name: Create Release
+    - name: Delete release
+      uses: cb80/delrel@latest
+      with:
+        tag: 'latest'
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Create release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        tag_name: latest
+        release_name: Latest Release           
         draft: false
         prerelease: false
 
