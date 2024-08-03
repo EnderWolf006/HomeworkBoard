@@ -95,3 +95,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./ServerProject/server.py
         asset_name: APIServer-release.py
+        asset_content_type: text/plain
