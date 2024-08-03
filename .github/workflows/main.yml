@@ -18,23 +18,21 @@ jobs:
       with:
         node-version: '16' 
 
-    - name: Redirect to SchoolProject
-      run: cd ./SchoolProject
-
-    - name: Install dependencies
+    - name: Install School dependencies
       run: npm install
+      working-directory: ./SchoolProject
 
-    - name: Build project
+    - name: Build School project
       run: npm run build
+      working-directory: ./SchoolProject
 
-    - name: Redirect to ClientProject
-      run: cd ../ClientProject
-
-    - name: Install dependencies
+    - name: Install Client dependencies
       run: npm install
+      working-directory: ./ClientProject
 
-    - name: Build project
+    - name: Build Client project
       run: npm run build
+      working-directory: ./ClientProject
 
 
     - name: Create Release
