@@ -5,11 +5,9 @@ import json
 import datetime
 from flask import Flask, request, json, Response,send_from_directory
 app = Flask(__name__)
+dbPath = '/workspaces/HomeworkBoard/jsondb'
 if os.name == 'nt':
-    dbPath = f'{os.getenv("appdata")}/HomeworkBoard/jsondb/homeworkBoard'
-else:
-    dbPath = '/workspaces/HomeworkBoard/jsondb/homeworkBoard'
-    
+    dbPath = f'{os.getenv("appdata")}/HomeworkBoard/jsondb'
 try:
     os.makedirs(dbPath) 
 except: 
