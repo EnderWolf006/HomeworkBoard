@@ -1,0 +1,109 @@
+* {
+  font-family: '微软雅黑';
+  -webkit-user-select: none;
+  user-select: none;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  border: solid 0;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 12px;
+  margin: 14px 12px 0px 12px;
+}
+
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.subtitle {
+  font-size: 24px;
+  display: inline;
+  color: #444;
+}
+
+.subsubtitle{
+  font-size: 18px;
+}
+
+.attentContent{
+  font-size: 20px;
+  padding: 0 0 10px 0px;
+}
+
+.workContentBox {
+  font-size: 20px;
+  padding: 0 0 8px 0px;
+}
+
+.singleWorkContent {
+  display: inline-block;
+  padding-left: 28px;
+  position: relative;
+}
+
+.checkbox {
+  scale: 1.4;
+  margin: 0 8px;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+
+.appBar {
+  display: block;
+  position: sticky;
+  text-align: center;
+  font-size: 24px;
+  background-image: linear-gradient(135deg, #CE9FFCc4 10%, #7367F0b4 100%);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 12px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  top: 0;
+  z-index: 10;
+  box-shadow: 1px 0px 16px rgba(0, 0, 0, 0.6);
+}
+
+.arrow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  top: 0;
+  width: 50px;
+  color: rgba(256, 256, 256, .9);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+}
+
+.arrow:hover {
+  color: #ffffff;
+  font-weight: 900;
+  -webkit-text-stroke: 1px white;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255), 1px 1px 8px rgb(255, 255, 255);
+}
+
+.arrow:active {
+  color: #c300ff;
+  font-weight: 900;
+  -webkit-text-stroke: .5px white;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+}
+
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow {
+  right: 0;
+}
+

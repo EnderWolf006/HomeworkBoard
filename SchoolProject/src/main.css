@@ -1,0 +1,191 @@
+* {
+  font-family: '微软雅黑';
+  box-sizing: border-box;
+  user-select: none;
+  word-break: break-all;
+}
+
+
+html {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+h1 {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 40px;
+}
+
+h1 div {
+  font-size: 30px;
+  display: inline;
+  color: #444;
+  font-weight: 400;
+}
+
+.main-window {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.homework-area {
+  display: block;
+  height: 100vh;
+  padding: 10px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.attendance-area {
+  display: block;
+  flex-shrink: 0;
+  border-left: 3px double #666;
+  height: 100vh;
+  padding: 10px;
+}
+
+.homework-container {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #666;
+  position: relative;
+  display: flex;
+  align-content: space-evenly;
+  justify-content: center;
+}
+
+.homework-row {
+  padding: 10px 10px 10px 10px;
+  /* padding: 0 10px 10px 0; */
+  width: 50%;
+  /* background-color: #000; */
+  /* border-radius: 10px; */
+}
+
+.homework-row:nth-child(-n + 1) {
+  border-right: 1px dashed #666;
+}
+
+.homework-card {
+  position: relative;
+  border-radius: 10px;
+  /* border: 1px solid #666; */
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6), 0px 0px 1px rgba(0, 0, 0, 0.2);
+  min-width: 20vw;
+  white-space: pre-wrap;
+}
+
+.homework-card:active {
+  background-color: #aaa;
+}
+
+.homework-font-setter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  border-radius: 10px;
+  padding: 5px;
+  border: #aaa solid 1px;
+}
+
+.homework-font-zoom {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.homework-font-zoom:nth-child(-n + 1) {
+
+  border-right: 1px solid #aaa;
+}
+
+.homework-font-zoom:active {
+  background-color: #ddd;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #666;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.edit {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 2px;
+}
+
+.edit:hover {
+  background-color: #eee;
+}
+
+.edit:active {
+  background-color: #888;
+}
+
+.content {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+
+ol {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: large;
+  margin: 5px;
+  display: inline-block;
+}
+
+.card:active {
+  background-color: #aaa;
+}
+
+.selected {
+  border: 1px solid rgb(100, 0, 0);
+  background-color: rgb(163, 0, 0);
+  color: white;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.upload {
+  position: fixed;
+  z-index: 20;
+  background-color: #fff;
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 10px;
+}
