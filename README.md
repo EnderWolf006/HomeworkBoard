@@ -34,11 +34,12 @@
 - 解压其中的 `ClientProject-release.zip` `SchoolProject-release.zip` 
 
 #### 配置文件
-- 推荐使用vscode编辑 [点我查看如何下载]https://blog.csdn.net/lxyker/article/details/125761994
+- 推荐使用vscode编辑 [点我查看如何下载](https://blog.csdn.net/lxyker/article/details/125761994)
 - 在解压后的 `SchoolProject-release` 文件夹中打开 `config.json` 内部有详细的注释可自行修改
 - 在解压后的 `ClientProject-release` 文件夹中打开 `config.json` 内部有详细的注释可自行修改
 
 #### 部署服务端
+目录下打开命令行执行：按住Shift右键该目录文件夹 -> 打开 powershell -> 选择 `在此处打开 PowerShell 窗口`
 - 在 `SchoolProject-release` 目录下打开命令行执行 `py -m http.server 17313`
 - 在 `ClientProject-release` 目录下打开命令行执行 `py -m http.server 17314`
 - 在 `APIServer-release.py` 所在目录下打开命令行执行 `py APIServer-release.py`
