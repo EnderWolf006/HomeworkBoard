@@ -52,15 +52,9 @@
 import { ref, h, computed } from "vue"
 import axios from "axios";
 let url = ''
-axios.get('/config.json').then((res) => { 
-  url = res.data.url
-})
 let currentEditSubject = undefined
 let inputRef = ref()
 const studentList = ref(['加载中']);
-axios.get('/config.json').then((res) => { 
-  studentList.value = res.data.studentList
-})
 const selectedSet = ref(new Set())
 const dialogVisible = ref(false)
 const dialogTitle = ref('')
@@ -78,6 +72,8 @@ const homeworkArrange = ref([
   []
 ])
 axios.get('/config.json').then((res) => { 
+  url = res.data.url
+  studentList.value = res.data.studentList
   homeworkArrange.value = res.data.homeworkArrange
   for (let i = 0; i < homeworkArrange.value.length; i++) {
     for (let j = 0; j < homeworkArrange.value[i].length; j++) {
@@ -87,6 +83,7 @@ axios.get('/config.json').then((res) => {
       }
     }
   }
+  downloadDataDirectly()
 })
 const handleClose = (done) => {
   homeworkData.value[currentEditSubject].content = textarea.value
@@ -159,16 +156,8 @@ function uploadData() {
     })
   })
 }
-function downloadData() {
-  ElMessageBox.confirm(
-    '同步数据至本地会覆盖当前编辑的信息，是否继续？',
-    '警告',
-    {
-      confirmButtonText: '继续',
-      cancelButtonText: '取消',
-      type: 'warning',
-    }
-  ).then(() => {
+
+const downloadDataDirectly = () => {
     downloadLoading.value = true
     axios.get(url + '/download', {
       params: {
@@ -193,7 +182,18 @@ function downloadData() {
       ElMessage.error(`下载失败：${err}`)
       downloadLoading.value = false
     })
-  })
+  }
+
+function downloadData() {
+  ElMessageBox.confirm(
+    '同步数据至本地会覆盖当前编辑的信息，是否继续？',
+    '警告',
+    {
+      confirmButtonText: '继续',
+      cancelButtonText: '取消',
+      type: 'warning',
+    }
+  ).then(downloadDataDirectly)
 
 }
 </script>
