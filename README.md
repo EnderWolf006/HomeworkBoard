@@ -27,7 +27,7 @@
 
 - 你需要准备一台学校内网或公网的Windows电脑/服务器
 - 在服务器上安装Python3.8及以上版本 [点我下载](https://mirrors.aliyun.com/python-release/windows/python-3.8.9.exe)，安装时请勾选“添加 Python 到环境变量”(Add Python To Path)
-- 安装好Python后，在命令行输入 `pip install flask`
+- 安装好Python后，双击运行解压`Start-Deployment.zip`后得到的 `install Flask.cmd`文件
 
 #### 准备文件
 - 下载右侧Releases中Latest版本的三个文件 `APIServer-release.py`  `ClientProject-release.zip` `SchoolProject-release.zip``Start-Deployment.zip` 
