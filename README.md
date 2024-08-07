@@ -50,6 +50,8 @@
 
 #### 快速部署指南
 [点我跳转](https://github.com/fhz08/HomeworkBoard-Rapid-Deployment-WinServer)
+本指南将会帮助您快速部署HomeworkBoard作业板
+
 ## 开源协议
 
 本软件遵循 `GPLv3` 开源协议，以下为该协议内容解读摘要:
