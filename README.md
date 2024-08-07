@@ -48,6 +48,8 @@
 - 学校作业板: 浏览器访问 `http://localhost:17313`(若不在本地部署, 请将localhost换成服务器ip或域名)
 - 查作业界面: 浏览器访问 `http://localhost:17314`(若不在本地部署, 请将localhost换成服务器ip或域名)
 
+#### 快速部署指南
+[点我跳转](https://github.com/fhz08/HomeworkBoard-Rapid-Deployment-WinServer)
 ## 开源协议
 
 本软件遵循 `GPLv3` 开源协议，以下为该协议内容解读摘要:
