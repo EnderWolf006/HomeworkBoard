@@ -50,7 +50,7 @@
 
 #### 快速部署指南
 [点我跳转](https://github.com/fhz08/HomeworkBoard-Rapid-Deployment-WinServer)
-本指南将会帮助您快速部署HomeworkBoard作业板
+本指南将会帮助您在Windows系统(Windows Server)下快速部署HomeworkBoard作业板
 
 ## 开源协议
 
