@@ -30,8 +30,8 @@
 - 安装好Python后，在命令行输入 `pip install flask`
 
 #### 准备文件
-- 下载右侧Releases中Latest版本的三个文件 `APIServer-release.py`  `ClientProject-release.zip` `SchoolProject-release.zip` 
-- 解压其中的 `ClientProject-release.zip` `SchoolProject-release.zip` 
+- 下载右侧Releases中Latest版本的三个文件 `APIServer-release.py`  `ClientProject-release.zip` `SchoolProject-release.zip``Start-Deployment.zip` 
+- 解压其中的 `ClientProject-release.zip` `SchoolProject-release.zip``Start-Deployment.zip` 
 
 #### 配置文件
 - 推荐使用vscode编辑 [点我查看如何下载](https://blog.csdn.net/lxyker/article/details/125761994)
@@ -39,18 +39,14 @@
 - 在解压后的 `ClientProject-release` 文件夹中打开 `config.json` 内部有详细的注释可自行修改
 
 #### 部署服务端
-目录下打开命令行执行：按住Shift右键该目录文件夹 -> 打开 powershell -> 选择 `在此处打开 PowerShell 窗口`
-- 在 `SchoolProject-release` 目录下打开命令行执行 `py -m http.server 17313`
-- 在 `ClientProject-release` 目录下打开命令行执行 `py -m http.server 17314`
-- 在 `APIServer-release.py` 所在目录下打开命令行执行 `py APIServer-release.py`
+将解压后得到的`startClient.cmd`、`StartSchool.cmd`、`start-APIServer.cmd` 文件移动到目录下
+- 将`startClient.cmd`文件移动到 `SchoolProject-release` 所在目录下双击运行
+- 将`StartSchool.cmd`文件移动到 `ClientProject-release` 所在目录下双击运行
+- 将`start-APIServer.cmd`文件移动到 `APIServer-release.py` 所在目录下双击运行
 
 #### 使用客户端
 - 学校作业板: 浏览器访问 `http://localhost:17313`(若不在本地部署, 请将localhost换成服务器ip或域名)
 - 查作业界面: 浏览器访问 `http://localhost:17314`(若不在本地部署, 请将localhost换成服务器ip或域名)
-
-#### 快速部署指南
-[点我跳转](https://github.com/fhz08/HomeworkBoard-Rapid-Deployment-WinServer)
-本指南将会帮助您在Windows系统(Windows Server)下快速部署HomeworkBoard作业板
 
 ## 开源协议
 
