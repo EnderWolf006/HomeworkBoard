@@ -1,3 +1,5 @@
+> 本项目已停止维护，推荐使用[@孙悟元](https://github.com/SunWuyuan) 的项目 [Classworks](classworks.wuyuan.dev)
+
 # 作业板
 ![](ReadMeImages/img.png)
 
